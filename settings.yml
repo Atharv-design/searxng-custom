@@ -4,19 +4,20 @@ server:
   secret_key: "${SEARXNG_SECRET}"
   limiter: false
   image_proxy: false
+  allowed_hosts:
+    - "searxng-neuroflow-v2.onrender.com"
 
 search:
   formats:
     - html
     - json
 
-outgoing:
-  request_timeout: 15.0
-  max_request_timeout: 30.0
-
-# Disable bot detection completely
 botdetection:
   ip_limit:
     filter_on: false
   ip_lists:
     filter_on: false
+
+outgoing:
+  request_timeout: 15.0
+  max_request_timeout: 30.0
