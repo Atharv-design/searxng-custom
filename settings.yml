@@ -4,7 +4,6 @@ server:
   secret_key: "${SEARXNG_SECRET}"
   limiter: false
   image_proxy: false
-  allowed_hosts: "*"       
 
 search:
   formats:
@@ -14,3 +13,10 @@ search:
 outgoing:
   request_timeout: 15.0
   max_request_timeout: 30.0
+
+# Disable bot detection completely
+botdetection:
+  ip_limit:
+    filter_on: false
+  ip_lists:
+    filter_on: false
