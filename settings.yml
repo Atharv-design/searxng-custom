@@ -4,7 +4,7 @@ server:
   secret_key: "${SEARXNG_SECRET}"
   limiter: false
   image_proxy: false
-  allowed_hosts: []
+  allowed_hosts: "*"       
 
 search:
   formats:
